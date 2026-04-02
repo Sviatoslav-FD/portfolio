@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+body {
+  @apply text-white bg-black;
+}
+
+.text-color {
+	background: linear-gradient(to right, #05df72, #292929);
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+.badge {
+  @apply bg-linear-to-r from-green-500 to-green-900 rounded-full p-2 text-center border border-green-500 hover:from-green-900 hover:to-green-500 transition-colors duration-500 inline-block px-8;
+}
