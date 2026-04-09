@@ -1,12 +1,22 @@
 <template>
   <header
     ref="header"
-    class="flex justify-between items-center p-4 bg-black/70 backdrop-blur-sm transition-all duration-300 z-10"
+    class="flex justify-between items-center md:p-4 p-2 bg-black/70 backdrop-blur-sm transition-all duration-300 z-10 relative"
     :class="isTopScrolled ? '' : 'fixed w-full top-0'"
     >
+
+    <div
+      class="md:hidden w-8 h-5 rounded-lg flex flex-col justify-between"
+      @click="isMobileNavOpen = !isMobileNavOpen"
+    >
+      <div class="h-1 bg-green-500 rounded-lg" />
+      <div class="h-1 bg-green-500 rounded-lg" />
+      <div class="h-1 bg-green-500 rounded-lg" />
+    </div>
+
     <NuxtLink
       to="/"
-      class="font-semibold text-3xl text-green-500"
+      class="md:visible hidden font-semibold text-3xl text-green-500"
       @mouseenter="isNameHovered = true"
       @mouseleave="isNameHovered = false"
     >
@@ -17,12 +27,15 @@
       </span>
     </NuxtLink>
 
-    <nav>
-      <ul class="flex">
+    <nav
+      class="absolute md:static top-full left-0 w-full md:w-auto bg-black/70"
+      :class="isMobileNavOpen ? 'block' : 'hidden md:block'"
+    >
+      <ul class="md:flex font-thin text-3xl md:text-base">
         <li
           v-for="m in menu"
           :key="m.name"
-          class="mx-2"
+          class="mx-2 my-4 md:my-0"
         >
           <a :href="m.href" class="hover:underline hover:text-green-500 transition-colors duration-300">{{ m.name }}</a>
         </li>
@@ -41,6 +54,7 @@ import AppButton from '@/components/shared/AppButton.vue'
 
 const isNameHovered = ref(false)
 const isTopScrolled = ref(true)
+const isMobileNavOpen = ref(false)
 const headerRef = useTemplateRef<HTMLElement | null>('header')
 
 const menu = [

@@ -1,5 +1,5 @@
 <template>
-  <div class="mb-2 bg-green-700/20 p-4 rounded-lg border border-green-700 flex items-center gap-4">
+  <div class="mb-2 bg-green-700/20 md:p-4 p-2 rounded-lg border border-green-700 flex items-center gap-4">
     <div class="bg-green-500/50 p-2 rounded-lg">
       <slot name="icon" />
     </div>

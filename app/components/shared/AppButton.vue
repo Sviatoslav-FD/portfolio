@@ -1,6 +1,7 @@
 <template>
   <button
     :type
+		class="text-nowrap"
     :class="classes"
     :disabled
   >
@@ -25,7 +26,7 @@ const classes = computed<string>(() => {
 	let classes = ''
 
 	if (props.variant === 'primary') {
-		classes = 'rounded-full text-green-500 px-8 py-4 bg-slate-800 hover:bg-slate-700 font-semibold cursor-pointer'
+		classes = 'rounded-full text-green-500 md:px-8 md:py-4 px-4 py-2 bg-green-700/20 hover:bg-green-700/40 font-semibold cursor-pointer border border-green-500 transition-colors duration-300'
 	}
 
 	return `${classes} ${props.disabled && 'cursor-not-allowed!'}`

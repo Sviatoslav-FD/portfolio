@@ -1,30 +1,42 @@
 <template>
-  <section role="region" aria-labelledby="about-section-title" id="about-section" class="px-4 py-8 flex gap-8">
-    <div class="w-1/2">
+  <section
+    role="region"
+    aria-labelledby="about-section-title"
+    id="about-section"
+    class="px-4 py-8 md:flex gap-8"
+  >
+    <div class="md:w-1/2 mb-8">
       <AppBadge>
         <div class="flex items-center gap-4">
           <IconInfo />
           About Me
         </div>
       </AppBadge>
-      <h2 id="about-section-title" class="text-5xl leading-tight font-thin my-8">Crafting Digital Experiences That Inspire</h2>
-      <p class="mb-4 text-white/70">
+
+      <h2
+        id="about-section-title"
+        class="md:text-5xl text-3xl font-thin md:my-8 my-4 text-balance"
+      >
+        Crafting Digital Experiences That Inspire
+      </h2>
+
+      <p class="mb-4 text-white/80 text-balance">
         I am a passionate software engineer with over 8 years of experience in frontend and full-stack development. 
         My expertise lies in JavaScript, TypeScript, Vue, React, and Node.js, allowing me to create dynamic and responsive web applications.
         I thrive on solving complex problems and delivering high-quality solutions that enhance user experiences.
       </p>
-      <p class="text-white/70 mb-8">
+      <p class="text-white/80 mb-8 text-balance">
         Throughout my career, I have successfully completed over 50 projects, ranging from small startups to large enterprises. 
         I am committed to continuous learning and staying up-to-date with the latest technologies to ensure that my work remains innovative and effective.
       </p>
 
-      <AppButton class="flex items-center gap-4">
+      <AppButton class="flex items-center gap-4 mx-auto md:mx-0">
         <IconDownload />
         Download Resume
       </AppButton>
     </div>
 
-    <ul class="w-1/2" role="list" aria-label="List of skills and expertise">
+    <ul class="md:w-1/2 w-full" role="list" aria-label="List of skills and expertise">
       <li
         v-for="(item, index) in items"
         :key="index"

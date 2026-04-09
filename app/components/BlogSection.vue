@@ -13,9 +13,14 @@
         </div>
       </AppBadge>
 
-      <h2 id="blog-section-title" class="text-5xl leading-tight font-thin my-8">Latest Blog Posts</h2>
+      <h2
+        id="blog-section-title"
+        class="md:text-5xl text-3xl font-thin md:my-8 my-4 text-balance"
+      >
+        Latest Blog Posts
+      </h2>
 
-      <p class="mb-16 text-white/80">
+      <p class="md:mb-16 mb-8 text-white/80 text-balance">
         An overview of my latest blog posts and articles.<br />
         I share insights, tutorials, and updates on web development, programming, and technology trends.
       </p>
@@ -25,11 +30,11 @@
       <li
         v-for="post in blogPosts.slice(0, 6)"
         :key="post.id"
-        class="bg-white/10 rounded-lg p-4 aspect-square flex flex-col"
+        class="bg-green-700/20 border border-green-500 rounded-lg p-4 md:aspect-square flex flex-col"
       >
         <h3 class="text-xl font-semibold mb-2 text-balance">{{ post.title }}</h3>
         <p class="text-sm text-white/80 mb-4 truncate">{{ post.excerpt }}</p>
-        <div class="grow mb-4 rounded-lg bg-white/9 text-center aspect-video">
+        <div class="grow mb-4 rounded-lg bg-white/9 text-center aspect-video md:block hidden">
           <NuxtImg
             v-if="post.image"
             :src="post.image"

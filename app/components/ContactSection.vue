@@ -1,5 +1,5 @@
 <template>
-  <section role="region" aria-labelledby="contact-section-title" id="contact-section" class="px-4 py-8 gap-8">
+  <section role="region" aria-labelledby="contact-section-title" id="contact-section" class="px-4 md:py-8 py-4 gap-8">
     <div class="text-center">
       <AppBadge>
         <div class="flex items-center gap-2">
@@ -8,16 +8,21 @@
         </div>
       </AppBadge>
 
-      <h2 id="contact-section-title" class="text-5xl leading-tight font-thin my-8">Let's Work Together</h2>
+      <h2
+        id="contact-section-title"
+        class="md:text-5xl text-3xl font-thin md:my-8 my-4 text-balance"
+      >
+        Let's Work Together
+      </h2>
 
-      <p class="mb-16 text-white/80">
+      <p class="md:mb-16 mb-8 text-white/80 text-balance">
         I'm always open to new opportunities and collaborations.<br />
         Whether you have a project in mind, want to discuss potential partnerships, or just want to say hello, feel free to reach out.
       </p>
     </div>
 
-    <div class="flex gap-8">
-      <form class="w-1/2 rounded-lg bg-slate-800 p-8 border border-green-700">
+    <div class="md:flex gap-8">
+      <form class="md:w-1/2 w-full rounded-lg bg-slate-800 p-8 border border-green-700">
         <div class="mb-4">
           <label for="name" class="block text-sm font-medium mb-1">Name</label>
           <input type="text" id="name" class="w-full px-3 py-2 rounded-md bg-white/20 focus:bg-white/30 focus:outline-none transition duration-200" placeholder="Your Name" />
@@ -38,9 +43,9 @@
         </AppButton>
       </form>
 
-      <div class="w-1/2">
-        <h3 class="text-4xl leading-tight font-thin">Let's Connect</h3>
-        <p class="my-4 text-white/80">
+      <div class="md:w-1/2 w-full md:mt-0 mt-8">
+        <h3 class="md:text-4xl text-2xl leading-tight font-thin">Let's Connect</h3>
+        <p class="my-4 text-white/80 text-balance">
           I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.<br />
           Feel free to reach out through any of the following methods:
         </p>
