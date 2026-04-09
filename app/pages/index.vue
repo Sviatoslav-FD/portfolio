@@ -1,21 +1,24 @@
 <template>
   <div class="select-none">
-    <div class="min-h-screen flex flex-col justify-around">
-      <!-- HEADER -->
-      <AppHeader />
-      
-      <!-- MAIN -->
-      <AppMain />
-    </div>
+    <!-- HEADER -->
+    <AppHeader />
+    
+    <!-- MAIN SECTION -->
+    <MainSection />
 
-    <!-- ABOUT -->
-    <AppAbout />
+    <!-- ABOUT SECTION -->
+    <AboutSection />
 
-    <!-- SKILLS -->
-    <AppSkills />
+    <!-- SKILLS SECTION -->
+    <SkillsSection />
+    
+    <!-- BLOG SECTION -->
+    <BlogSection />
+
+    <!-- CONTACT SECTION -->
+    <ContactSection />
+
+    <!-- FOOTER -->
+    <AppFooter />
   </div>
 </template>
-
-<script lang="ts" setup>
-
-</script>

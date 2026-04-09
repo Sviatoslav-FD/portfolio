@@ -4,7 +4,8 @@
     class="flex justify-between items-center p-4 bg-black/70 backdrop-blur-sm transition-all duration-300 z-10"
     :class="isTopScrolled ? '' : 'fixed w-full top-0'"
     >
-    <p
+    <NuxtLink
+      to="/"
       class="font-semibold text-3xl text-green-500"
       @mouseenter="isNameHovered = true"
       @mouseleave="isNameHovered = false"
@@ -14,7 +15,7 @@
         :class="isNameHovered && 'text-green-500'"
       >oslav
       </span>
-    </p>
+    </NuxtLink>
 
     <nav>
       <ul class="flex">
@@ -43,12 +44,12 @@ const isTopScrolled = ref(true)
 const headerRef = useTemplateRef<HTMLElement | null>('header')
 
 const menu = [
-  { name: 'Home', href: '/' },
-  { name: 'About', href: '/about' },
-  { name: 'Skills', href: '/skills' },
-  { name: 'Projects', href: '/projects' },
-  { name: 'Blog', href: '/blog' },
-  { name: 'Contact', href: '/contact' },
+  { name: 'Home', href: '#main-section' },
+  { name: 'About', href: '#about-section' },
+  { name: 'Skills', href: '#skills-section' },
+  { name: 'Projects', href: '#' },
+  { name: 'Blog', href: '#blog-section' },
+  { name: 'Contact', href: '#contact-section' },
 ]
 
 const topScroll = () => {

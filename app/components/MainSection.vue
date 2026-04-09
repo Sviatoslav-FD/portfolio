@@ -1,5 +1,9 @@
 <template>
-  <main class="p-4 flex gap-8">
+  <main
+    id="main-section"
+    class="p-4 flex gap-8 min-h-screen items-center"
+    role="region"
+    aria-labelledby="main-section-title">
     <div class="w-1/2 flex flex-col justify-between gap-8">
       <AppBadge>
         Senior Frontend/Full-stack Developer
@@ -25,7 +29,7 @@
         </div>
       </AppBadge>
 
-      <h1 class="text-7xl font-thin">Software Engineer Portfolio</h1>
+      <h1 id="main-section-title" class="text-7xl font-thin">Software Engineer Portfolio</h1>
 
       <p class="text-white/70">
         Building modern web applications with cutting-edge technologies and a passion for creating seamless user experiences.
@@ -46,8 +50,8 @@
       </AppButton>
     </div>
 
-    <img
-      src="~/assets/images/hero.png"
+    <NuxtImg
+      src="/images/hero.png"
       alt="hero-image"
       class="w-1/2 bg-green-100 rounded-lg aspect-square text-center"
     />

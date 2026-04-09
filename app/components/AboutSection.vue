@@ -1,5 +1,5 @@
 <template>
-  <section class="px-4 py-8 flex gap-8">
+  <section role="region" aria-labelledby="about-section-title" id="about-section" class="px-4 py-8 flex gap-8">
     <div class="w-1/2">
       <AppBadge>
         <div class="flex items-center gap-4">
@@ -7,7 +7,7 @@
           About Me
         </div>
       </AppBadge>
-      <h2 class="text-5xl leading-tight font-thin my-8">Crafting Digital Experiences That Inspire</h2>
+      <h2 id="about-section-title" class="text-5xl leading-tight font-thin my-8">Crafting Digital Experiences That Inspire</h2>
       <p class="mb-4 text-white/70">
         I am a passionate software engineer with over 8 years of experience in frontend and full-stack development. 
         My expertise lies in JavaScript, TypeScript, Vue, React, and Node.js, allowing me to create dynamic and responsive web applications.
@@ -24,11 +24,12 @@
       </AppButton>
     </div>
 
-    <ul class="w-1/2">
+    <ul class="w-1/2" role="list" aria-label="List of skills and expertise">
       <li
         v-for="(item, index) in items"
         :key="index"
-        class="mb-4 border border-green-700 rounded-lg px-4 py-2 cursor-pointer bg-slate-800"
+        class="mb-4 border border-green-700 rounded-lg px-4 py-2 cursor-pointer hover:bg-green-900 transition-colors duration-300"
+        :class="openedIndex === index ? 'bg-green-900' : 'bg-slate-800'"
       >
         <h3
           class="text-lg cursor-pointer w-full flex items-center justify-between"
