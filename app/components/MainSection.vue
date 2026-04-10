@@ -1,7 +1,7 @@
 <template>
   <main
     id="main-section"
-    class="flex flex-col gap-4 items-center min-h-full md:p-16 p-4 bg-[url(/images/hero.png)] bg-cover bg-center"
+    class="grow flex flex-col gap-4 items-center justify-between min-h-full md:p-16 p-4 bg-[url(/images/hero.png)] bg-cover bg-center"
     role="main"
     aria-labelledby="main-section-title"
   >
@@ -23,7 +23,7 @@
     </p>
 
     <AppBadge class="font-thin md:w-auto w-full">
-      <div class="flex md:items-center justify-between gap-8 md:h-auto h-6">
+      <div class="flex md:items-center justify-between gap-8 md:h-8 h-6">
         <p class="flex items-center">
           <IconJavascript class="mr-1" />
           <span class="md:block hidden">Javascript</span>

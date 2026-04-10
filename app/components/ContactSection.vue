@@ -22,7 +22,7 @@
     </div>
 
     <div class="md:flex gap-8">
-      <form class="md:w-1/2 w-full rounded-lg bg-slate-800 p-8 border border-green-700">
+      <form class="md:w-1/2 w-full rounded-lg bg-green-700/20 p-8 border border-green-700">
         <div class="mb-4">
           <label for="name" class="block text-sm font-medium mb-1">Name</label>
           <input type="text" id="name" class="w-full px-3 py-2 rounded-md bg-white/20 focus:bg-white/30 focus:outline-none transition duration-200" placeholder="Your Name" />
@@ -64,7 +64,11 @@
           Stryi, Lviv, Ukraine
         </ContactsBox>
 
-        <ContactsBox label="LinkedIn" href="https://www.linkedin.com/in/sviatoslavpanevnyk/">
+        <ContactsBox
+          label="LinkedIn"
+          href="https://www.linkedin.com/in/sviatoslavpanevnyk/"
+          class="mb-0!"
+        >
           <template #icon><IconLinkedIn /></template>
           Sviatoslav Panevnyk
         </ContactsBox>
