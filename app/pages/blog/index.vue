@@ -7,7 +7,6 @@
       v-for="post in blogPosts"
       :key="post.id"
       class="bg-white/10 rounded-lg p-4 flex md:flex-row flex-col gap-4"
-      :class="post.isStub && 'pointer-events-none grayscale'"
     >
       <NuxtImg
         :src="post.image"
