@@ -34,13 +34,13 @@ jobs:
       - name: update tailwindcss
         uses: ZoeyVid/tailwindcss-update@main
         with:
-          input: src/input.css
-          output: src/output.css
+          input: src/assets/css/main.css
+          output: src/assets/css/output.css
           params: "--minify"
           
       - name: push changes
         run: |
-          git add --force src/output.css
+          git add --force src/assets/css/output.css
           git config user.name "GitHub"
           git config user.email "noreply@github.com"
           git diff-index --quiet HEAD || git commit -sm "tailwindcss-update"
