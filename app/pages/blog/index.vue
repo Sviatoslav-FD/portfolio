@@ -8,11 +8,11 @@
       :key="post.id"
       class="bg-white/10 rounded-lg p-4 flex md:flex-row flex-col gap-4"
     >
-      <NuxtImg
+      <!-- <NuxtImg
         :src="post.image"
         :alt="post.title"
         class="grow mb-4 rounded-lg object-cover border border-white/20 text-center aspect-video md:w-1/2"
-      />
+      /> -->
 
       <div>
         <h3 class="text-xl font-semibold mb-2 text-balance">{{ post.title }}</h3>

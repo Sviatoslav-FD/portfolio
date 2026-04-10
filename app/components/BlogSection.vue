@@ -35,14 +35,13 @@
         <h3 class="text-xl font-semibold mb-2 text-balance">{{ post.title }}</h3>
         <p class="text-sm text-white/80 mb-4 truncate">{{ post.excerpt }}</p>
         <div class="grow mb-4 rounded-lg bg-white/9 text-center aspect-video md:block hidden">
-          <NuxtImg
+          <!-- <NuxtImg
             v-if="post.image"
             :src="post.image"
             :alt="post.title"
             class="object-cover w-full h-full rounded-lg"
-          />
+          /> -->
           <p
-            v-else
             class="text-xl font-thin text-white/50 p-4 text-balance"
           >
             Would be great to add an image here.
